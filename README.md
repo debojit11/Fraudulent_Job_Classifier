@@ -1,4 +1,4 @@
-# Job Fraud Detection
+# Fraudulent_Job_Classifier
 
 ## 📋 Overview
 This project implements machine learning models to detect fraudulent job postings. Using natural language processing (NLP) techniques, multiple models have been trained and evaluated to identify potentially deceptive job advertisements, helping job seekers avoid scams.
