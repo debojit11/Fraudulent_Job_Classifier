@@ -141,9 +141,6 @@ job-fraud-detection/
 - Integrate with email systems for automated scanning
 - Develop browser extensions for real-time checking while browsing job sites
 
-## 📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## 👏 Acknowledgements
 - HuggingFace for the transformers library
 - Sentence-Transformers for the embedding models
