@@ -19,8 +19,8 @@ page = st.sidebar.radio("Go to", ["🔍 Analyze a Job Post", "📊 Model Perform
 # ==== Load Models ====
 @st.cache_resource
 def load_bert_model():
-    tokenizer = DistilBertTokenizerFast.from_pretrained("models/tokenizer")
-    model = DistilBertForSequenceClassification.from_pretrained("models/fraud_job_distilbert")
+    tokenizer = DistilBertTokenizerFast.from_pretrained("models/tokenizer", local_files_only=True)
+    model = DistilBertForSequenceClassification.from_pretrained("models/fraud_job_distilbert", local_files_only=True)
     model.eval()
     return tokenizer, model
 
