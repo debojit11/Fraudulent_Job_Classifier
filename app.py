@@ -96,6 +96,7 @@ if page == "🔍 Analyze a Job Post":
     if st.session_state.analyzed:
         raw_text = st.session_state.text
         text = raw_text
+        st.markdown("The models are trained on clear scammy descriptions like **Urgent hire! No skills needed. Work remotely and earn $500 daily. Apply with your personal details to secure your spot!**. If the description is confusing or too short, the models may not perform well.")
         st.subheader("🔍 Results")
 
 
