@@ -49,8 +49,8 @@ Online job platforms are often targeted by scammers posting fake job opportuniti
 ### Setup
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/job-fraud-detection.git
-   cd job-fraud-detection
+   git clone https://github.com/debojit11/Fraudulent_Job_Classifier.git
+   cd Fraudulent_Job_Classifier
    ```
 
 2. Install dependencies:
@@ -61,7 +61,8 @@ Online job platforms are often targeted by scammers posting fake job opportuniti
 3. Download pre-trained models or train your own:
    ```bash
    # To train models
-   python train.py
+   train.ipynb
+   train_with_embed.ipynb
    ```
 
 ## 🖥️ Usage
@@ -69,30 +70,6 @@ Online job platforms are often targeted by scammers posting fake job opportuniti
 ### Running the Web App
 ```bash
 streamlit run app.py
-```
-
-### Using the API
-```python
-import joblib
-from transformers import DistilBertTokenizerFast, DistilBertForSequenceClassification
-import torch
-
-# Load the model
-tokenizer = DistilBertTokenizerFast.from_pretrained("models/tokenizer")
-model = DistilBertForSequenceClassification.from_pretrained("models/fraud_job_distilbert")
-
-# Function for prediction
-def predict(text):
-    inputs = tokenizer(text, return_tensors="pt", truncation=True, padding=True)
-    with torch.no_grad():
-        outputs = model(**inputs)
-        probs = torch.nn.functional.softmax(outputs.logits, dim=-1)
-    return probs[0].tolist()
-
-# Example
-job_description = "Work from home opportunity! Make $5000 weekly with no experience!"
-result = predict(job_description)
-print(f"Fraud probability: {result[1]:.2f}")
 ```
 
 ## 🌐 Web Application Features
@@ -114,6 +91,7 @@ job-fraud-detection/
 ├── models/                     # Saved ML models
 │   ├── tokenizer/              # DistilBERT tokenizer
 │   ├── fraud_job_distilbert/   # DistilBERT model
+├   ├── embedding_model/
 │   ├── job_fraud_logistic.joblib
 │   ├── embedding_random_forest_job_fraud.joblib
 │   ├── embedding_gradient_boosting_job_fraud.joblib
