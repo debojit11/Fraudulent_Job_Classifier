@@ -38,7 +38,7 @@ Online job platforms are often targeted by scammers posting fake job opportuniti
 | XGBoost (Embeddings) | 1.00 | 1.00 |
 | MLP Classifier (Embeddings) | 0.99 | 0.99 |
 | Logistic Regression (TF-IDF) | 0.97 | 0.96 |
-| Gradient Boosting (Embeddings) | 0.94 | 0.92 |
+| Gradient Boosting (Embeddings) | 0.94 | 0.93 |
 
 ## 🔧 Installation
 
