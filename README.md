@@ -141,6 +141,7 @@ job-fraud-detection/
    - Ensemble decision-making for higher accuracy
 
 ## 🙌 Future Improvements
+- Training models over time with new datatsets for improvised generalization
 - Implement active learning to improve model accuracy over time
 - Add multilingual support for global job markets
 - Integrate with email systems for automated scanning
