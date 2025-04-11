@@ -44,10 +44,12 @@ def load_embedder():
 
 def clean_text(text):
     text = str(text)
-    text = re.sub(r"http\S+|www\S+|https\S+", '', text, flags=re.MULTILINE)  # Remove URLs
-    text = re.sub(r'\@\w+|\#', '', text)  # Remove mentions, hashtags
-    text = re.sub(r"[^a-zA-Z0-9\s]", '', text)  # Remove special characters
-    text = text.lower()
+    text = re.sub(r"http\S+|www\S+|https\S+", '', text, flags=re.MULTILINE)   # Remove URLs
+    text = re.sub(r'\@\w+|\#', '', text)   # Remove mentions, hashtags
+    text = re.sub(r"[^a-zA-Z0-9\s]", '', text)   # Remove most special characters
+    text = re.sub(r'mso\S+|ascii\S+|font\S+|times new roman|calibri|minorlatin|engt|ntte\d+q|c\s+', '', text) # Remove specific formatting strings
+    text = re.sub(r'email\w+|phonew+', '', text) # Remove potential email and phone placeholders
+    text = re.sub(r'\s+', ' ', text).strip() # Remove extra whitespace
     return text.strip()
 
 
@@ -126,7 +128,6 @@ if page == "🔍 Analyze a Job Post":
                 '<h3 style="text-align:center;">This job is likely to be <span style="color:green; font-size: 2em;"><b><i>Legit</i></b></span></h3>',
                 unsafe_allow_html=True
             )
-
 
         # === DistilBERT ===
         st.markdown("**🤖 DistilBERT**")
