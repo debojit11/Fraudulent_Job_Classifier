@@ -1,5 +1,10 @@
 # Fraudulent_Job_Classifier
 
+## 🌐 Live Demo
+🚀 Try the app here: [fraud-job-classifier.streamlit.app](https://fraud-job-classifier.streamlit.app/)
+
+✅ **Deployed on Streamlit Community Cloud**
+
 ## 📋 Overview
 This project implements machine learning models to detect fraudulent job postings. Using natural language processing (NLP) techniques, multiple models have been trained and evaluated to identify potentially deceptive job advertisements, helping job seekers avoid scams.
 
