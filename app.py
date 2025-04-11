@@ -40,7 +40,7 @@ def load_embedding_models():
 
 @st.cache_resource
 def load_embedder():
-    return SentenceTransformer('all-MiniLM-L6-v2')
+    return SentenceTransformer("models/embedding_model")
 
 def clean_text(text):
     text = str(text)
