@@ -42,15 +42,15 @@ def load_embedding_models():
 def load_embedder():
     return SentenceTransformer("all-MiniLM-L6-v2")
 
-def clean_text(text):
-    text = str(text)
-    text = re.sub(r"http\S+|www\S+|https\S+", '', text, flags=re.MULTILINE)   # Remove URLs
-    text = re.sub(r'\@\w+|\#', '', text)   # Remove mentions, hashtags
-    text = re.sub(r"[^a-zA-Z0-9\s]", '', text)   # Remove most special characters
-    text = re.sub(r'mso\S+|ascii\S+|font\S+|times new roman|calibri|minorlatin|engt|ntte\d+q|c\s+', '', text) # Remove specific formatting strings
-    text = re.sub(r'email\w+|phonew+', '', text) # Remove potential email and phone placeholders
-    text = re.sub(r'\s+', ' ', text).strip() # Remove extra whitespace
-    return text.strip()
+# def clean_text(text):
+#     text = str(text)
+#     text = re.sub(r"http\S+|www\S+|https\S+", '', text, flags=re.MULTILINE)   # Remove URLs
+#     text = re.sub(r'\@\w+|\#', '', text)   # Remove mentions, hashtags
+#     text = re.sub(r"[^a-zA-Z0-9\s]", '', text)   # Remove most special characters
+#     text = re.sub(r'mso\S+|ascii\S+|font\S+|times new roman|calibri|minorlatin|engt|ntte\d+q|c\s+', '', text) # Remove specific formatting strings
+#     text = re.sub(r'email\w+|phonew+', '', text) # Remove potential email and phone placeholders
+#     text = re.sub(r'\s+', ' ', text).strip() # Remove extra whitespace
+#     return text.strip()
 
 
 # Load resources
@@ -95,7 +95,7 @@ if page == "🔍 Analyze a Job Post":
 
     if st.session_state.analyzed:
         raw_text = st.session_state.text
-        text = clean_text(raw_text)
+        text = raw_text
         st.subheader("🔍 Results")
 
 
