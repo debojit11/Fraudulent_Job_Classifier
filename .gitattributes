@@ -1,2 +1,4 @@
 models/fraud_job_distilbert/model.safetensors filter=lfs diff=lfs merge=lfs -text
 dataset/job_postings.csv filter=lfs diff=lfs merge=lfs -text
+*.bin filter=lfs diff=lfs merge=lfs -text
+*.safetensors filter=lfs diff=lfs merge=lfs -text

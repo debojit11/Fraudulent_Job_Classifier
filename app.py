@@ -224,11 +224,12 @@ elif page == "📊 Model Performance Dashboard":
     st.subheader("🧮 Confusion Matrix Viewer")
 
     confusion_data = {
-        "Logistic Regression (TF-IDF)": np.array([[3306, 97], [74, 2195]]),
+        "DistilBERT": np.array([[3394, 9], [0, 2269]]),
+        "Logistic Regression (TF-IDF)": np.array([[3302, 101], [91, 2178]]),
         "Random Forest (Embeddings)": np.array([[3402, 1], [0, 2269]]),
-        "Gradient Boosting (Embeddings)": np.array([[3275, 128], [237, 2032]]),
-        "MLP Classifier (Embeddings)": np.array([[3369, 34], [0, 2269]]),
-        "XGBoost (Embeddings)": np.array([[3397, 6], [0, 2269]])
+        "Gradient Boosting (Embeddings)": np.array([[3288, 115], [209, 2060]]),
+        "MLP Classifier (Embeddings)": np.array([[3366, 37], [0, 2269]]),
+        "XGBoost (Embeddings)": np.array([[3398, 5], [0, 2269]])
     }
 
     selected_model = st.selectbox("Select a model to view its confusion matrix:", list(confusion_data.keys()))
