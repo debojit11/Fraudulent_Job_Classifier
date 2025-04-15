@@ -6,13 +6,13 @@
 ✅ **Deployed on Streamlit Community Cloud**
 
 ## 📋 Overview
-This project implements machine learning models to detect fraudulent job postings. Using natural language processing (NLP) techniques, multiple models have been trained and evaluated to identify potentially deceptive job advertisements, helping job seekers avoid scams.
+This project implements  models to detect fraudulent job postings. Using natural language processing (NLP) techniques, multiple models have been trained and evaluated to identify potentially deceptive job advertisements, helping job seekers avoid scams.
 
 ## 🎯 Problem Statement
 Online job platforms are often targeted by scammers posting fake job opportunities. These fraudulent postings can lead to identity theft, financial loss, and wasted time for job seekers. This project aims to create a reliable AI system that can automatically flag suspicious job postings.
 
 ## 🚀 Features
-- Multiple ML models for fraud detection:
+- Multiple models for fraud detection:
   - DistilBERT transformer model
   - Logistic Regression with TF-IDF
   - Embedding-based models (Random Forest, Gradient Boosting, MLP, XGBoost)
